@@ -16,8 +16,8 @@ for (var i = 0; i < customers.results.length; i++) {
   let person_container = document.createElement("div") // space to hold my information - only the place for 1 staff
   let staff_name = document.createElement("a") // - creates the space to - 1st set of information -
   let personal_information = document.createElement("div")
-  let image = document.createElement("image")
-  image.src = customers[i].picture.large
+  let image = document.createElement("img")
+  image.src = customers.results[i].picture.large
 
   staff_name.innerHTML = customers.results[i].name.first // accesing (right side) (left side ) assigning info to the "a" "div" - taken the specific information for customers.js
   personal_information.innerHTML = customers.results[i].email + "<br>" + customers.results[i].location.street
