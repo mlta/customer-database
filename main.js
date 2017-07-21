@@ -15,9 +15,11 @@ let mediumBox = document.querySelector(".mediumBox")
 
 for (var i = 0; i < customers.results.length; i++) {
   let personBox = document.createElement("div")
+  personBox.classList.add("personBox")
 
   let image = document.createElement("img")
   let firstAndLastname = document.createElement("p")
+  firstAndLastname.classList.add("name")
   let email = document.createElement("p")
   let address = document.createElement("address")
   let phone = document.createElement("phone")
@@ -25,8 +27,15 @@ for (var i = 0; i < customers.results.length; i++) {
   image.src = customers.results[i].picture.large
   firstAndLastname.textContent = customers.results[i].name.first + " " + customers.results[i].name.last
   email.textContent = customers.results[i].email
-  address.textContent = customers.results[i].location
+  address.textContent =
+    customers.results[i].location.street +
+    " " +
+    customers.results[i].location.city +
+    customers.results[i].location.state +
+    customers.results[i].location.postcode
   phone.textContent = customers.results[i].phone
+
+  console.log(customers.results)
 
   personBox.appendChild(image)
   personBox.appendChild(firstAndLastname)

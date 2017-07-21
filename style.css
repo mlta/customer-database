@@ -1,16 +1,23 @@
 body {
+  margin: 0 2em;
 }
 
 h1 {
   text-align: center;
+  border: ;
 }
 
 .mediumBox {
-  flex-direction: row;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: right;
 }
 
 .personBox {
   align-content: center;
+  width: 20%;
+  text-align: center;
+  margin: 1em;
 }
 
 .personBox > img {
@@ -18,8 +25,13 @@ h1 {
   height: 16em;
 }
 
-.personBox p {
+.name {
   text-align: center;
+  border-bottom: gray solid .22em;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: inline-block;
 }
 
 .personBox address {
